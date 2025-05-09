@@ -24,7 +24,8 @@
 主要是是把ALIST_HOST环境变量的主机的ip和端口放一起了，变量也可以直接填写不带端口号的域名，所以原版的环境变量端口删掉了。
 安装好原版的docker后，下载替换main.py文件再启动
 替换命令：
-docker cp /这里改成在vps上的文件路径/main.py alist-strm:/app/main.py
+
+docker cp /vps路径/main.py alist-strm:/app/main.py
 
 原理：每小时获取一次 115 网盘内的 `目录树.txt`，并生成（更新） strm 文件。
 >PS: 由于 alist 默认有文件缓存 30 分钟后，所以115网盘内的目录树更新后，strm 文件可能在下一个整点更新，也可能在第二个整点更新。
