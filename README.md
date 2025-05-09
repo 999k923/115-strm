@@ -35,7 +35,6 @@ services:
         container_name: alist-strm
         environment:
           - ALIST_HOST=192.168.1.100
-          - ALIST_PORT=5244
           - ALIST_115_MOUNT_PATH=/115
           - ALIST_115_TREE_FILE=/目录树.txt
           - EXCLUDE_OPTION=1
@@ -60,8 +59,7 @@ services:
 相关环境变量：
 
 ```env
-ALIST_HOST=192.168.1.100       # alist 主机的 ip
-ALIST_PORT=5244                # alist 主机的端口
+ALIST_HOST=192.168.1.100:5244       # alist 主机的 ip加上端口，或者填写访问alist的域名
 ALIST_115_MOUNT_PATH=/115      # 115网盘在 alist 中的挂载路径：115
 
 # 可选配置，用于探测目录树的 sha1 是否改变，需启用 guest 用户，并给 guest 用户 webdav 读取权限
