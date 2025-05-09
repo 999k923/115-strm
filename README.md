@@ -21,7 +21,7 @@
 
 生成的 strm 文件添加到 emby 可进行播放。infuse 添加 emby 正常使用，不会触发 115 风控。
 
-主要是替换了主机的ip和端口放一起了，也可以直接使用域名不带端口，所以原版的环境变量端口删掉了。
+主要是是把ALIST_HOST环境变量的主机的ip和端口放一起了，变量也可以直接填写不带端口号的域名，所以原版的环境变量端口删掉了。
 安装好原版的docker后，下载替换main.py文件再启动
 替换命令：
 docker cp /root/115-strm-custom/115-strm/src/main.py alist-strm:/app/main.py
@@ -66,7 +66,7 @@ services:
 相关环境变量：
 
 ```env
-ALIST_HOST=192.168.1.100:5244       # alist 主机的 ip加上端口，或者填写访问alist的域名
+ALIST_HOST=192.168.1.100:5244       # alist 主机的 ip加上端口，或者填写自己alist的域名：https://example.com
 ALIST_115_MOUNT_PATH=/115      # 115网盘在 alist 中的挂载路径：115
 
 # 可选配置，用于探测目录树的 sha1 是否改变，需启用 guest 用户，并给 guest 用户 webdav 读取权限
