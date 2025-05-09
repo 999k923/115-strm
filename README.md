@@ -21,6 +21,11 @@
 
 生成的 strm 文件添加到 emby 可进行播放。infuse 添加 emby 正常使用，不会触发 115 风控。
 
+主要是替换了主机的ip和端口放一起了，也可以直接使用域名不带端口，所以原版的环境变量端口删掉了。
+安装好原版的docker后，替换main.py文件再启动
+替换命令：docker cp /root/115-strm-custom/115-strm/src/main.py alist-strm:/app/main.py
+/root/115-strm-custom/115-strm/src/main.py 这里改成文件再vps上的路径位置。
+
 原理：每小时获取一次 115 网盘内的 `目录树.txt`，并生成（更新） strm 文件。
 >PS: 由于 alist 默认有文件缓存 30 分钟后，所以115网盘内的目录树更新后，strm 文件可能在下一个整点更新，也可能在第二个整点更新。
 
