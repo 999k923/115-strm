@@ -25,7 +25,7 @@
 安装好原版的docker后，下载替换main.py文件再启动
 替换命令：
 
-docker cp /vps路径/main.py alist-strm:/app/main.py
+docker cp /vps路径/main.py 容器名称:/app/main.py
 
 原理：每小时获取一次 115 网盘内的 `目录树.txt`，并生成（更新） strm 文件。
 >PS: 由于 alist 默认有文件缓存 30 分钟后，所以115网盘内的目录树更新后，strm 文件可能在下一个整点更新，也可能在第二个整点更新。
