@@ -44,7 +44,7 @@ services:
         image: ghcr.io/uwang/115-strm:latest
         container_name: alist-strm
         environment:
-          - ALIST_HOST=http://192.168.1.100
+          - ALIST_HOST=http://192.168.1.100:5244   #如果是域名包含了端口直接写域名https://example.com
           - ALIST_115_MOUNT_PATH=/115
           - ALIST_115_TREE_FILE=/目录树.txt
           - EXCLUDE_OPTION=1
