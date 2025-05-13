@@ -28,7 +28,8 @@
 
 docker cp /vps路径/main.py 容器名称:/app/main.py
 
-
+执行权限：
+sudo docker exec -it 容器名称 chmod +x /app/main.py
 
 
 原理：每小时获取一次 115 网盘内的 `目录树.txt`，并生成（更新） strm 文件。
