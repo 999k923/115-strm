@@ -24,9 +24,9 @@
 对比原版修改了是把ALIST_HOST环境变量的主机的ip和端口放一起了，变量也可以直接填写不带端口号的域名，所以原版的环境变量端口删掉了。
 另外原版每次更新文件，之前存在的strm文件也会重新生成导致影片添加日期紊乱，现在只会更新新添加的视频。
 安装好原版的docker后，只需要替换容器内文件main.py再启动即可
-替换命令：
 
-docker cp /vps路径/main.py 容器名称:/app/main.py
+
+替换命令：docker cp /vps路径/main.py 容器名称:/app/main.py
 
 执行权限：
 sudo docker exec -it 容器名称 chmod +x /app/main.py
