@@ -26,12 +26,12 @@
 安装好原版的docker后，只需要下载src里面的main.py文件替换替换容器内文件再启动即可
 
 
-替换命令：docker cp /vps路径/main.py 115strm:/app/main.py
+替换命令：docker cp /vps路径/main.py alist-strm:/app/main.py
 
 执行权限：
-sudo docker exec -it 115strm chmod +x /app/main.py
+sudo docker exec -it alist-strm chmod +x /app/main.py
 
-115strm是容器名称，如果名称不一样替换一下
+alist-strm是容器名称，如果名称不一样替换一下
 
 
 原理：每小时获取一次 115 网盘内的 `目录树.txt`，并生成（更新） strm 文件。
