@@ -44,7 +44,7 @@ alist-strm是容器名称，如果名称不一样替换一下
 ```yml
 services:
     alpine:
-        image: ghcr.io/uwang/115-strm:latest
+        image: 999k923/115-strm:latest
         container_name: alist-strm
         environment:
           - ALIST_HOST=http://192.168.1.100:5244   #或者使用含端口的域名:https://example.com
