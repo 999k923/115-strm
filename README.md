@@ -54,7 +54,7 @@ services:
           - UPDATE_EXISTING=0
           - DELETE_ABSENT=1
           - ALIST_115_TREE_FILE_FOR_GUEST=/115/目录树.txt
-          - MEDIA_EXTENSIONS=mp3,flac,wav,aac,ogg,wma,alac,m4a,aiff,ape,dsf,dff,wv,pcm,tta,mp4,mkv,avi,mov,wmv,flv,webm,vob,mpg,mpeg,iso
+          - MEDIA_EXTENSIONS=mp3,flac,wav,aac,ogg,wma,alac,ts,m4a,aiff,ape,dsf,dff,wv,pcm,tta,mp4,mkv,avi,mov,wmv,flv,webm,vob,mpg,mpeg,iso,m4v,rmvb
           - TZ=Asia/Shanghai
         volumes:
             - '/path/to/strm:/data' # 修改为自己的存储路径
